@@ -3,8 +3,9 @@
 //Logo Heading
 let headingClick = document.querySelector(".logo-heading");
 headingClick.addEventListener("dblclick", () => {
-    headingClick.style.transform = "scale(2)";
+    headingClick.style.transform = "scale(1.5)";
 })
+
 
 
 // let headingEffect = document.querySelector(".logo-heading");
@@ -41,5 +42,10 @@ let navEffect2 = document.querySelectorAll(".nav-link").forEach(element => {
     })
 });
 
+//Header
+const headClick = document.querySelector(".intro");
+headClick.addEventListener("click", () => {
+    headClick.style.backgroundColor = "#FFD800";
+})
 
 
