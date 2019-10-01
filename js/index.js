@@ -65,3 +65,11 @@ function zoom(event) {
 let scale = 1;
 const imgZoom = document.querySelector(".img-content");
 imgZoom.onwheel = zoom;
+
+
+const colorChng = document.querySelector(".content-section")
+window.addEventListener('scroll', () => {
+    colorChng.style.backgroundColor = "black";
+    colorChng.style.color = "white";
+})
+
