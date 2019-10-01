@@ -48,4 +48,20 @@ headClick.addEventListener("click", () => {
     headClick.style.backgroundColor = "#FFD800";
 })
 
+/// content section
 
+/// img 1 wheel
+function zoom(event) {
+    event.preventDefault();
+
+    scale += event.deltaY * -0.01;
+
+    //restrict scale
+    scale = Math.min(Math.max(.125, scale), 4);
+
+    //scale transform
+    imgZoom.style.transform = `scale(${scale})`;
+}
+let scale = 1;
+const imgZoom = document.querySelector(".img-content");
+imgZoom.onwheel = zoom;
