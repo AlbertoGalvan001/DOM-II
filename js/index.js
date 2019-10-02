@@ -1,19 +1,22 @@
 // Your code goes here
 
-//Logo Heading
-let headingClick = document.querySelector(".logo-heading");
-headingClick.addEventListener("dblclick", () => {
-    headingClick.style.transform = "scale(1.5)";
+//Logo Heading double click
+// let headingClick = document.querySelector(".logo-heading");
+// headingClick.addEventListener("dblclick", () => {
+//     headingClick.style.transform = "scale(1.5)";
+// })
+
+const stopLink = document.querySelector(".nav-link");
+stopLink.addEventListener("click", (event) => {
+    event.preventDefault();
 })
 
-
-
-// let headingEffect = document.querySelector(".logo-heading");
-// headingEffect.addEventListener("dblclick", () => {
-//     TweenMax.to(".logo-heading", 2, {
-//         rotation: 360,
-//     })
-// })
+let headingEffect = document.querySelector(".logo-heading");
+headingEffect.addEventListener("mouseenter", () => {
+    TweenMax.to(".logo-heading", 2, {
+        rotation: 1800,
+    })
+})
 
 // headingEffect.addEventListener("dblclick", () => {
 //     TweenMax.to(".logo-heading", 2, {
@@ -24,7 +27,7 @@ headingClick.addEventListener("dblclick", () => {
 
 
 
-// Navigation 
+// Navigation  mouseover
 let navEffect = document.querySelectorAll(".nav-link").forEach(element => {
     element.addEventListener("mouseover", () => {
         element.style.color = "red";
@@ -33,7 +36,7 @@ let navEffect = document.querySelectorAll(".nav-link").forEach(element => {
     })
 
 });
-
+/// mouse leave
 let navEffect2 = document.querySelectorAll(".nav-link").forEach(element => {
     element.addEventListener("mouseleave", () => {
         element.style.color = "#212529";
@@ -42,7 +45,7 @@ let navEffect2 = document.querySelectorAll(".nav-link").forEach(element => {
     })
 });
 
-//Header
+//Header click
 const headClick = document.querySelector(".intro");
 headClick.addEventListener("click", () => {
     headClick.style.backgroundColor = "#FFD800";
@@ -50,7 +53,7 @@ headClick.addEventListener("click", () => {
 
 /// content section
 
-/// img 1 wheel
+///  wheel
 function zoom(event) {
     event.preventDefault();
 
@@ -66,10 +69,25 @@ let scale = 1;
 const imgZoom = document.querySelector(".img-content");
 imgZoom.onwheel = zoom;
 
+// scroll
 
 const colorChng = document.querySelector(".content-section")
 window.addEventListener('scroll', () => {
     colorChng.style.backgroundColor = "black";
     colorChng.style.color = "white";
+})
+
+// content destination - blur
+const blurImg = document.querySelector(".content-destination");
+blurImg.addEventListener("focus", () => {
+    blurImg.style.background = "pink";
+})
+
+// content destination - doubleclick
+let doubleEffect = document.querySelector(".content-destination");
+doubleEffect.addEventListener("dblclick", () => {
+    TweenMax.to(".content-destination", 1, {
+        rotation: 360,
+    })
 })
 
